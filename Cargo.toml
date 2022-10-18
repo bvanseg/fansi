@@ -10,12 +10,11 @@ authors = [
 repository = "https://github.com/bvanseg/fansi"
 documentation = "https://docs.rs/fansi"
 
-license = "MIT"
 license-file = "LICENSE"
 
 readme = "README.md"
 
-keywords = ["ansi", "color", "terminal", "fancy", "fansi", "windows-1252"]
+keywords = ["ansi", "color", "terminal", "cli", "windows-1252"]
 categories = ["command-line-utilities", "cli", "ansi", "terminal"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
