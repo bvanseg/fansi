@@ -1,5 +1,6 @@
 use crate::color::AnsiColor;
 
+#[derive(Clone)]
 pub enum AnsiStyle {
     ForegroundColor(AnsiColor),
     Bold,

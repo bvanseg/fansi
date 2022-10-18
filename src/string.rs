@@ -8,21 +8,11 @@ pub struct AnsiString {
 }
 
 impl AnsiString {
-    pub fn from_str(text: &str, styles: Vec<&str>) -> Self {
-        AnsiString {
-            text: text.to_string(),
-            styles: styles.iter().map(|f| f.to_string()).collect(),
-        }
+    pub fn with_styles_arr(text: &str, styles: &[AnsiStyle]) -> Self {
+        return AnsiString::with_styles_vec(text, styles.to_vec());
     }
 
-    pub fn from_styles_arr(text: &str, styles: &[AnsiStyle]) -> Self {
-        AnsiString {
-            text: text.to_string(),
-            styles: styles.iter().map(|f| f.code().to_string()).collect(),
-        }
-    }
-
-    pub fn from_styles_vec(text: &str, styles: Vec<AnsiStyle>) -> Self {
+    pub fn with_styles_vec(text: &str, styles: Vec<AnsiStyle>) -> Self {
         AnsiString {
             text: text.to_string(),
             styles: styles.iter().map(|f| f.code().to_string()).collect(),
