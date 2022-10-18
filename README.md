@@ -41,7 +41,7 @@ The container can then be applied to any `String` and re-used over and over as s
 // Create styles.
 let style = vec![AnsiStyle::ForegroundColor(AnsiColor::Green)];
 // Create container.
-let container = AnsiStyleContainer::new(style);
+let container = AnsiStyleContainer::from_vec(style);
 // Apply container's compiled style string to text.
 let text = container.apply("world!");
 // Print text.
