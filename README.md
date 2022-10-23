@@ -1,5 +1,22 @@
+[discord-shield]: https://img.shields.io/discord/1031520677787865108
+[discord-invite]: https://discord.com/invite/xyaKBzarJs
+
+[actions-shield]: https://github.com/bvanseg/fansi/actions/workflows/rust.yml/badge.svg
+[actions-yml]: https://github.com/bvanseg/fansi/actions/workflows/rust.yml
+
+[license]: https://img.shields.io/github/license/bvanseg/fansi
+[code-size]: https://img.shields.io/github/languages/code-size/bvanseg/fansi
+
+[rust-lang]: https://www.rust-lang.org/
+[rust-shield]: https://img.shields.io/badge/Made%20with-Rust-1f425f.svg
 
 # Fansi
+
+![GitHub][license]
+[![rust-shield][]][rust-lang]
+[![Rust][actions-shield]][actions-yml]
+![GitHub code size in bytes][code-size]
+[![discord-shield][]][discord-invite]
 
 This crate allows developers to add color to their terminal output.
 
