@@ -6,7 +6,10 @@ pub mod windows;
 
 #[cfg(test)]
 mod tests {
-    use crate::{color::AnsiColor, style::AnsiStyle, string::AnsiString, windows::enable_ansi_support, container::AnsiStyleContainer};
+    use crate::{color::AnsiColor, style::AnsiStyle, string::AnsiString, container::AnsiStyleContainer};
+
+    #[cfg(windows)]
+    use crate::{windows::enable_ansi_support};
 
     #[test]
     fn test_bold() {
@@ -41,6 +44,7 @@ mod tests {
     }
 
     #[test]
+    #[cfg(windows)]
     fn test_windows_enable_ansi_support() {
         let result = enable_ansi_support();
         assert_eq!(result, Ok(()));
