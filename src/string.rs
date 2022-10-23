@@ -9,7 +9,7 @@ pub struct AnsiString {
 
 impl AnsiString {
     pub fn with_styles_arr(text: &str, styles: &[AnsiStyle]) -> Self {
-        return AnsiString::with_styles_vec(text, styles.to_vec());
+        AnsiString::with_styles_vec(text, styles.to_vec())
     }
 
     pub fn with_styles_vec(text: &str, styles: Vec<AnsiStyle>) -> Self {

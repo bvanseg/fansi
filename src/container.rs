@@ -9,14 +9,14 @@ impl AnsiStyleContainer {
     pub fn from_vec(styles: Vec<AnsiStyle>) -> Self {
         let compiled_styles = styles.iter().map(AnsiStyle::code).collect();
 
-        return AnsiStyleContainer {
-            styles: styles,
-            compiled_styles: compiled_styles,
-        };
+        AnsiStyleContainer {
+            styles,
+            compiled_styles,
+        }
     }
 
     pub fn from_arr(styles: &[AnsiStyle]) -> Self {
-        return AnsiStyleContainer::from_vec(styles.to_vec());
+        AnsiStyleContainer::from_vec(styles.to_vec())
     }
 
     pub fn apply(&self, text: &str) -> String {
